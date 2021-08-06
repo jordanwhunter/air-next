@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 // Icons
-import { SearchIcon } from '@heroicons/react/solid';
+import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon } from '@heroicons/react/solid';
 
 const Header = () => {
   return (
@@ -50,7 +50,7 @@ const Header = () => {
       '>
         <input 
           type='text' 
-          placeholder='Start you search...' 
+          placeholder='Search...' 
           className='
             pl-3
             bg-transparent
@@ -71,10 +71,46 @@ const Header = () => {
           p-2
           cursor-pointer
           md:mx-2
-        '/>
+        ' />
       </div>
-      {/* right div */}
 
+      {/* right div */}
+      <div className='
+        flex
+        items-center
+        space-x-4
+        justify-end
+        text-gray-500
+      '>
+        <p className='
+          hidden
+          cursor-pointer
+          md:inline
+        '>
+          Become a host
+        </p>
+        <GlobeAltIcon className='
+          h-6
+          cursor-pointer
+        ' />
+        <div className='
+          flex
+          rounded-full
+          border-2
+          space-x-2
+          items-center
+          p-2
+        '>
+          <MenuIcon className='
+            h-6
+            cursor-pointer
+          ' />
+          <UserCircleIcon className='
+            h-6
+            cursor-pointer
+          ' />
+        </div>
+      </div>
     </header>
   )
 }
